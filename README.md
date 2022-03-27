@@ -59,4 +59,4 @@ Disclaimer: this process will be made easier in future versions of UltraCyberSta
 If you take a look at the utils.py file, you will notice a list of strings at line 22: just add the name of your module and it will be ignored from the 'all' command
 
 # Developer contact
-If you want to talk with me, visit my github profile (https://www.github.com/kl3sshydra) and scroll down to the 'contacts' section on the profile's readme file.
+If you want to talk with me, visit <a href="https://www.github.com/kl3sshydra"> my github profile </a> and scroll down to the 'contacts' section on the profile's readme file.
