@@ -31,3 +31,23 @@ Content example:<br>
 <br>
 This tells the program that on yoursite.com a non-existing user will be recognized via the word unregistered in the response.<br>
 ![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/usernamesearchresultsscreenshot.png)
+
+# Adding your custom modules
+Adding your custom module on UltraCyberStalk is simpler to do than to explain, with the following steps:<br>
+Go on the modules.py file and write your module:
+```
+class myepicmodule:
+  def main(self):
+     print("hello from my custom module!")
+```
+Once you finish writing your module its time to actually add it:<br>
+Go on the commands.json file, you will find the other commands there.<br>
+![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/commandscreenshot.png)<br>
+You will notice that the commands here are stored following this syntax:
+```
+"mycommand": [
+        "this is the descriptin of my cool command",
+        "utils.myepicmodule()"
+],
+```
+Once you finish adding the command you created, you will be able to see it in the 'help' menu of the program and to use it (even with the 'all' function)<br>
