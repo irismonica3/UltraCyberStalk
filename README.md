@@ -52,7 +52,7 @@ You will notice that the commands here are stored following this syntax:
 ```
 Once you finish adding the command you created, you will be able to see it in the 'help' menu of the program and to use it (even with the 'all' function)<br>
 
-# Removing command from the 'all' function
+# Removing a command from the 'all' function
 "What if i want my module to be executed only when i want it, and not in the 'all' function too?" I got you covered!<br>
 Disclaimer: this process will be made easier in future versions of UltraCyberStalk.<br>
 ![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/allscreenshot.png)<br>
