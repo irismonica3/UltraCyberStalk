@@ -23,6 +23,10 @@
         "use google dorks to find info about your target",
         "dork = modules.dork();dork.main('normal')"
     ],
+    "dorkdepth": [
+        "sets the dorking module's depth",
+        "dork = modules.dork();dork.setdepth()"
+    ],
     "bye": [
         "exits from ultracyberstalk",
         "utils.goodbye()"

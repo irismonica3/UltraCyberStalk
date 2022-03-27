@@ -16,6 +16,10 @@ class dork:
             if x == j:
                 return False
         return True
+    def setdepth(self):
+        f = open("CONFIG/dorksdepth.txt", "w")
+        f.write(input("Insert dorking depth: "))
+        f.close()
     def dorkingmodule(self, mode):
         dork.url_list = []
         utils.set_target()
@@ -23,9 +27,14 @@ class dork:
         if mode == "normal":
             depth = int(input("Max urls per request: "))
         else:
-            depth = 30
+            try:
+                depth = int(open("CONFIG/dorksdepth.txt", "r").readline())
+            except Exception as e:
+                print(e)
+                exit()
+                depth = 30
         dork.depth = depth
-        utils.betterprint(f"Using the dork module against '{target}'..")
+        utils.betterprint(f"Using the dork module against '{target}' with depth {str(depth)}..")
         for line in open("CONFIG/dorks.txt","r").readlines():
             exec(f"dork.processurls_dork(f\"{line.strip()}\")")
     def main(self, mode):
@@ -43,21 +52,27 @@ class instagrambio:
     def main(self):
         target = open("CONFIG/target.txt", "r").readline()
         utils.betterprint(f"Using instagrambio against '{target}'..")
-        instagrambio.searchmybio(target)
+        try:
+            instagrambio.searchmybio(target)
+        except IndexError:
+            utils.betterprint("No result found with instagrambio module")
 
 class usernamesearch:
     def searchusername(url):
-        domain = url.split("https://")[1].split("/")[0]
-        r = requests.get(url, headers={"Accept-Language": "en-US,en;q=0.5"})
-        for line in open("CONFIG/usernamesearchresults.txt", "r").readlines():
-            line = line.strip()
-            if domain == line.split(' :: ')[0]:
-                if line.split(f"{domain} :: ")[1].startswith("CONTENT"):
-                    utils.betterprint(str(line.split(f"{domain} :: ")[1].split(" :: ")[1] in r.text).replace("False", f"Target found at -> {url}").replace("True", f"Target ·NOT· found at -> {url}"))
-                if line.split(f"{domain} :: ")[1].startswith("STATUSCODE"):
-                    utils.betterprint(str(line.split("STATUSCODE :: ")[1] == str(r.status_code)).replace("False", f"Target found at -> {url}").replace("True", f"Target ·NOT· found at -> {url}"))
+        try:
+            domain = url.split("https://")[1].split("/")[0]
+            r = requests.get(url, headers={"Accept-Language": "en-US,en;q=0.5", 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36'})
+            for line in open("CONFIG/usernamesearchresults.txt", "r").readlines():
+                line = line.strip()
+                if domain == line.split(' :: ')[0]:
+                    if line.split(f"{domain} :: ")[1].startswith("CONTENT"):
+                        utils.betterprint(str(line.split(f"{domain} :: ")[1].split(" :: ")[1] in r.text).replace("False", f"Target found at -> {url}").replace("True", f"Target ·NOT· found at -> {url}"))
+                    if line.split(f"{domain} :: ")[1].startswith("STATUSCODE"):
+                        utils.betterprint(str(line.split("STATUSCODE :: ")[1] == str(r.status_code)).replace("False", f"Target found at -> {url}").replace("True", f"Target ·NOT· found at -> {url}"))
 
-                break
+                    break
+        except KeyboardInterrupt:
+                return
 
     def main(self):
         utils.set_target()

@@ -1,3 +1,4 @@
 google
 platform
 json
+colorama

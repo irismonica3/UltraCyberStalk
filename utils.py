@@ -2,9 +2,29 @@ import platform
 import os
 import datetime
 import json
+from colorama import *
+from random import randint
 import modules
+init(autoreset=True)
 
 os.environ['logfile'] = "none"
+
+colorlist = [
+    Fore.BLUE,
+    Fore.CYAN,
+    Fore.GREEN,
+    Fore.YELLOW,
+    Fore.RED,
+    Fore.LIGHTBLACK_EX,
+    Fore.LIGHTCYAN_EX,
+    Fore.LIGHTGREEN_EX,
+    Fore.LIGHTMAGENTA_EX,
+    Fore.MAGENTA,
+    Fore.WHITE
+]
+
+def getRandomColor():
+    return colorlist[randint(0,len(colorlist)-1)]
 
 def clearscreen():
     if "windows" in platform.platform().lower():
@@ -30,7 +50,7 @@ def executeallmodules():
             exec(c)
 
 def betterprint(text):
-    print(text)
+    print(getRandomColor()+text)
     open("LOGS/"+os.getenv('logfile'), "a").write("\n"+text)
 
 def set_target():
@@ -45,7 +65,9 @@ def isnotargetselected():
 
 def gettarget():
     betterprint("Current target: "+currenttarget())
-    open("CONFIG/target.txt", "w").write(input("Insert target: "))
+    newtarget = input("Insert new target ('no_target' to skip): ")
+    if newtarget != "no_target":
+        open("CONFIG/target.txt", "w").write(newtarget)
     betterprint("New target: "+currenttarget())
 
 def printseparator():

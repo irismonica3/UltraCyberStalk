@@ -3,3 +3,9 @@ www.roblox.com :: STATUSCODE :: 404
 apps.runescape.com :: CONTENT :: NO_PROFILE
 scratch.mit.edu :: STATUSCODE :: 404
 it.wikipedia.org :: STATUSCODE :: 404
+tellonym.me :: STATUSCODE :: 404
+ws2.kik.com :: STATUSCODE :: 404
+www.wattpad.com :: STATUSCODE :: 404
+www.tripadvisor.it :: STATUSCODE :: 404
+www.pinterest.it :: STATUSCODE :: 404
+www.quora.com :: STATUSCODE :: 404

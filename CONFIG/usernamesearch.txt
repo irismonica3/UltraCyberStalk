@@ -3,3 +3,9 @@ https://www.roblox.com/user.aspx?username={target}
 https://apps.runescape.com/runemetrics/profile/profile?user={target}
 https://scratch.mit.edu/users/{target}
 https://it.wikipedia.org/wiki/Utente:{target}
+https://tellonym.me/{target}
+https://ws2.kik.com/user/{target}
+https://www.wattpad.com/user/{target}
+https://www.tripadvisor.it/members-forums/{target}
+https://www.pinterest.it/{target}
+https://www.quora.com/profile/{target}
