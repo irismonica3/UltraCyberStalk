@@ -3,8 +3,9 @@ import utils
 import threading
 import requests
 
+url_list = []
+
 class dork:
-    url_list = []
     depth = 0
     def processurls_dork(query):
             for j in search(query, tld="co.in", num=dork.depth, stop=dork.depth):
@@ -86,3 +87,27 @@ class usernamesearch:
                     exec("threading.Thread(target=usernamesearch.searchusername, args=(line.strip().replace('{target}','"+target+"'),)).start()")
                 except KeyboardInterrupt:
                     break
+
+class peoplesearch:
+    def radaris(name):
+        r = requests.get(name)
+        try:
+            found = r.text.split('<p class="narrow-normal-small pft-top-text">')[1].split("</span>")[0].replace("<span>", "")
+        except:
+            found = f"No pepole found for '{name}' in the US using radaris"
+        utils.betterprint(f"---\n{name} -> \n{found}\n---")
+
+    def peopledorks():
+        dorklist = ["paginebianche {target}", "paginegialle {target}"]
+        for d in dorklist:
+            for j in search(d, tld="co.in", num=dork.depth, stop=dork.depth):
+                if dork.shouldprinturl(j):
+                    utils.betterprint(f"---\nPeopleSearch dorks -> \n{j}\n---")
+                    dork.url_list.append(j)
+
+    def main(self):
+        target = open("CONFIG/target.txt", "r").readline()
+        query = f"https://radaris.com/p/{target.replace(' ', '/')}/"
+        utils.betterprint(f"Starting peoplesearch against '{target}'")
+        peoplesearch.radaris(query)
+        peoplesearch.peopledorks()

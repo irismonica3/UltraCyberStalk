@@ -91,5 +91,6 @@ def printseparator():
 
 def goodbye():
     betterprint("GoodBye!")
+    os.system("rm -rf __pycache__")
     exit()
 

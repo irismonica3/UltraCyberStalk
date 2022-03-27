@@ -19,6 +19,10 @@
         "search an username in some popular social medias",
         "usernamesearch = modules.usernamesearch();usernamesearch.main()"
     ],
+    "peoplesearch": [
+        "use public services to find info about a name",
+        "p = modules.peoplesearch();p.main()"
+    ],
     "dork": [
         "use google dorks to find info about your target",
         "dork = modules.dork();dork.main('normal')"
