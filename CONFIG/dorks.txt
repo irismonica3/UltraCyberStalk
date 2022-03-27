@@ -2,3 +2,5 @@
 intext:'{target}'
 intitle:'{target}'
 inurl:'{target}'
+allintext:'{target}'
+feed:'{target}'
