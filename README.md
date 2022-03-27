@@ -56,7 +56,7 @@ Once you finish adding the command you created, you will be able to see it in th
 "What if i want my module to be executed only when i want it, and not in the 'all' function too?" I got you covered!<br>
 Disclaimer: this process will be made easier in future versions of UltraCyberStalk.<br>
 ![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/allscreenshot.png)<br>
-If you take a look at the utils.py file, you will notice a list of strings at line 22: just add the name of your module and it will be ignored from the 'all' command
+If you take a look at the utils.py file, you will notice a list of strings at line 58: just add the name of your module and it will be ignored from the 'all' command
 
 # 👷‍♂️ Developer contact
 If you want to talk with me, visit <a href="https://www.github.com/kl3sshydra"> my github profile </a> and scroll down to the 'contacts' section on the profile's readme file.
