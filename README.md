@@ -1,4 +1,4 @@
-# UltraCyberStalk
+# :fire: UltraCyberStalk
 customizable python OSINT tool for information gathering
 
 # Setting up
