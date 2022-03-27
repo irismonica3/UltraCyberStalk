@@ -14,4 +14,4 @@ All module customization can be done by editing the files inside of the CONFIG f
 Customizing dorks:<br>
 Open the dorks.txt file and add your personal dorks,<br>
 Replacing the target name with {target}<br>
-![alt-text] (https://github.com/kl3sshydra/UltraCyberStalk/raw/main/dorkscreenshot.png)
+![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/dorkscreenshot.png)
