@@ -27,6 +27,10 @@
         "sets the dorking module's depth",
         "dork = modules.dork();dork.setdepth()"
     ],
+    "restart": [
+        "restarts the program",
+        "utils.restart()"
+    ],
     "bye": [
         "exits from ultracyberstalk",
         "utils.goodbye()"

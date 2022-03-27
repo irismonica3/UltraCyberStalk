@@ -78,8 +78,11 @@ class usernamesearch:
         utils.set_target()
         target = open("CONFIG/target.txt", "r").readline()
         utils.betterprint(f"Searching '{target}'..")
-        for line in open("CONFIG/usernamesearch.txt", "r").readlines():
-            try:
-                exec("threading.Thread(target=usernamesearch.searchusername, args=(line.strip().replace('{target}','"+target+"'),)).start()")
-            except KeyboardInterrupt:
-                break
+        if " " in target:
+            utils.betterprint("Skipping the usernamesearchmodule as the target contains spaces")
+        else:
+            for line in open("CONFIG/usernamesearch.txt", "r").readlines():
+                try:
+                    exec("threading.Thread(target=usernamesearch.searchusername, args=(line.strip().replace('{target}','"+target+"'),)).start()")
+                except KeyboardInterrupt:
+                    break

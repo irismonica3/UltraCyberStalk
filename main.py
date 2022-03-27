@@ -5,7 +5,7 @@ import sys
 
 class mainclass:
 
-    version = "1.0 beta"
+    version = "1.1 production"
 
     def processcommand(self, cmd):
 

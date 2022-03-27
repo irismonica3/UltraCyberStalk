@@ -3,11 +3,21 @@ import os
 import datetime
 import json
 from colorama import *
+import sys
 from random import randint
 import modules
 init(autoreset=True)
 
 os.environ['logfile'] = "none"
+
+stylelist = [
+    Style.DIM,
+    Style.BRIGHT,
+    Style.NORMAL,
+    '\033[1m',
+    '\033[3m',
+    '\033[4m'
+]
 
 colorlist = [
     Fore.BLUE,
@@ -25,6 +35,12 @@ colorlist = [
 
 def getRandomColor():
     return colorlist[randint(0,len(colorlist)-1)]
+
+def getRandomStyle():
+    return stylelist[randint(0,len(stylelist)-1)]
+
+def restart():
+    os.execl(sys.executable, sys.executable, *sys.argv)
 
 def clearscreen():
     if "windows" in platform.platform().lower():
@@ -50,7 +66,7 @@ def executeallmodules():
             exec(c)
 
 def betterprint(text):
-    print(getRandomColor()+text)
+    print(getRandomColor()+getRandomStyle()+text)
     open("LOGS/"+os.getenv('logfile'), "a").write("\n"+text)
 
 def set_target():
@@ -74,6 +90,6 @@ def printseparator():
     print("\n----------------\n")
 
 def goodbye():
-    print("GoodBye!")
+    betterprint("GoodBye!")
     exit()
 
