@@ -46,8 +46,17 @@ Go on the commands.json file, you will find the other commands there.<br>
 You will notice that the commands here are stored following this syntax:
 ```
 "mycommand": [
-        "this is the descriptin of my cool command",
+        "this is the description of my cool command",
         "utils.myepicmodule()"
 ],
 ```
 Once you finish adding the command you created, you will be able to see it in the 'help' menu of the program and to use it (even with the 'all' function)<br>
+
+# Removing command from the 'all' function
+"What if i want my module to be executed only when i want it, and not in the 'all' function too?" I got you covered!<br>
+Disclaimer: this process will be made easier in future versions of UltraCyberStalk.<br>
+![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/allscreenshot.png)<br>
+If you take a look at the utils.py file, you will notice a list of strings at line 22: just add the name of your module and it will be ignored from the 'all' command
+
+# Developer contact
+If you want to talk with me, visit my github profile (https://www.github.com/kl3sshydra) and scroll down to the 'contacts' section on the profile's readme file.
