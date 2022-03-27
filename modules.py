@@ -11,9 +11,9 @@ class dork:
             for j in search(query, tld="co.in", num=dork.depth, stop=dork.depth):
                 if dork.shouldprinturl(j):
                     utils.betterprint(j)
-                    dork.url_list.append(j)
+                    url_list.append(j)
     def shouldprinturl(j):
-        for x in dork.url_list:
+        for x in url_list:
             if x == j:
                 return False
         return True
@@ -22,7 +22,7 @@ class dork:
         f.write(input("Insert dorking depth: "))
         f.close()
     def dorkingmodule(self, mode):
-        dork.url_list = []
+        url_list = []
         utils.set_target()
         target = open("CONFIG/target.txt", "r").readline()
         if mode == "normal":
@@ -100,10 +100,10 @@ class peoplesearch:
     def peopledorks():
         dorklist = ["paginebianche {target}", "paginegialle {target}"]
         for d in dorklist:
-            for j in search(d, tld="co.in", num=dork.depth, stop=dork.depth):
+            for j in search(d, tld="co.in", num=15, stop=15):
                 if dork.shouldprinturl(j):
                     utils.betterprint(f"---\nPeopleSearch dorks -> \n{j}\n---")
-                    dork.url_list.append(j)
+                    url_list.append(j)
 
     def main(self):
         target = open("CONFIG/target.txt", "r").readline()
