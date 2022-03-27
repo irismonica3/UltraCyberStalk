@@ -1,0 +1,4 @@
+{target}
+intext:'{target}'
+intitle:'{target}'
+inurl:'{target}'

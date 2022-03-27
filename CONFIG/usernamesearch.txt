@@ -1,0 +1,5 @@
+https://pokemonshowdown.com/users/{target}
+https://www.roblox.com/user.aspx?username={target}
+https://apps.runescape.com/runemetrics/profile/profile?user={target}
+https://scratch.mit.edu/users/{target}
+https://it.wikipedia.org/wiki/Utente:{target}

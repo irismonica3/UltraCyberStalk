@@ -1,0 +1,34 @@
+{
+    "dellogs": [
+        "removes log file from the LOGS directory",
+        "os.system('rm LOGS/*');utils.betterprint('All logs files removed')"
+    ],
+    "all": [
+        "executes all modules against target",
+        "utils.executeallmodules()"
+    ],
+    "instagrambio": [
+        "searches instagram users with target in bio",
+        "bio = modules.instagrambio();bio.main()"
+    ],
+    "target": [
+        "sets the target to run modules on",
+        "utils.gettarget()"
+    ],
+    "usernamesearch": [
+        "search an username in some popular social medias",
+        "usernamesearch = modules.usernamesearch();usernamesearch.main()"
+    ],
+    "dork": [
+        "use google dorks to find info about your target",
+        "dork = modules.dork();dork.main('normal')"
+    ],
+    "bye": [
+        "exits from ultracyberstalk",
+        "utils.goodbye()"
+    ],
+    "cls": [
+        "clears screen",
+        "utils.clearscreen()"
+    ]
+}

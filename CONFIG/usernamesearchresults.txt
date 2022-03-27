@@ -1,0 +1,5 @@
+pokemonshowdown.com :: CONTENT :: Unregistered
+www.roblox.com :: STATUSCODE :: 404
+apps.runescape.com :: CONTENT :: NO_PROFILE
+scratch.mit.edu :: STATUSCODE :: 404
+it.wikipedia.org :: STATUSCODE :: 404
