@@ -20,7 +20,7 @@ Customizing the usernamesearch module:<br>
 The usernamesearch.txt file contains all urls where UltraCyberStalk will search the target on,<br>
 Remember to replace your target with {target}.<br><br>
 ![alt-text](https://github.com/kl3sshydra/UltraCyberStalk/raw/main/usernamesearchscreenshot.png)
-When adding your urls, make sure to add the proper syntax in the usernamesearchresults.txt file,<br>
+<br>When adding your urls, make sure to add the proper syntax in the usernamesearchresults.txt file,<br>
 Otherwise UltraCyberStalk will not recognize an existing username.<br>
 Status code example:<br>
 ```www.yoursite.com :: STATUSCODE :: 404```
