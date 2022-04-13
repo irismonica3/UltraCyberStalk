@@ -1,6 +1,6 @@
-{target}
-intext:'{target}'
-intitle:'{target}'
-inurl:'{target}'
-allintext:'{target}'
-feed:'{target}'
+{jmvasquez}
+intext:'{jmvasquez}'
+intitle:'{jmvasquez}'
+inurl:'{jmvasquez}'
+allintext:'{jmvasquez}'
+feed:'{jmvasquez}'
